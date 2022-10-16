@@ -29,7 +29,7 @@ sam deploy
 ## Fetch, tail, and filter Lambda function logs
 
 ```bash
-sam logs -n WhatAPeakFunction --stack-name What a Peak --tail
+sam logs -n WhatAPeakFunction --stack-name what-a-peak --tail
 ```
 
 ## Tests
