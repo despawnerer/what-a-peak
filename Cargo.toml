@@ -9,5 +9,9 @@ edition = "2021"
 lambda_http = "0.7"
 mediawiki = "0.2.8"
 rand = "0.8.5"
+reqwest = { version = "*", default-features = false, features = ["rustls-tls"] }
 serde_json = "*"
 tokio = { version = "1", features = ["full"] }
+
+[patch.crates-io]
+mediawiki = { path = "./mediawiki_rust" }
