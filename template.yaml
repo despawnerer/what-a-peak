@@ -17,6 +17,7 @@ Resources:
       CodeUri: build/
       Handler: bootstrap.is.the.handler
       Runtime: provided.al2
+      Timeout: 10
       Architectures:
         - x86_64
       Events:
