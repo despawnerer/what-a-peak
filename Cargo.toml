@@ -1,17 +1,5 @@
-[package]
-name = "what-a-peak"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-lambda_http = "0.7"
-mediawiki = "0.2.8"
-rand = "0.8.5"
-reqwest = { version = "*", default-features = false, features = ["rustls-tls"] }
-serde_json = "*"
-tokio = { version = "1", features = ["full"] }
-
-[patch.crates-io]
-mediawiki = { path = "./mediawiki_rust" }
+[workspace]
+members = [
+    "serve",
+    "generate"
+]

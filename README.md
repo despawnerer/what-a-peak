@@ -1,39 +1,25 @@
 # What a Peak
 
+Huh?
+
 ## Prerequsites
 
 * [Rust](https://www.rust-lang.org/)
-* [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
-* [Cargo Lambda](https://github.com/awslabs/aws-lambda-rust-runtime#getting-started)
 
-## Deploy
+## Structure
 
-### First time
+### [`data`](data)
 
-```bash
-make build
-sam deploy --guided
-```
+- `pics.txt` containing the list of URLs of pictures to be served
 
-The first command will build the source of your application. The second command will package and deploy your application to AWS, with a series of prompts.
+### [`generate`](generate)
 
-You can find your API Gateway Endpoint URL in the output values displayed after deployment.
+Binary crate that regenerates `data/pics.txt` from wikidata.
 
-### Subsequent times
+### [`serve`](serve)
 
-```bash
-make build
-sam deploy
-```
+Lambda that redirects to a random URL from `data/pics.txt`.
 
-## Fetch, tail, and filter Lambda function logs
+## Deployment
 
-```bash
-sam logs -n WhatAPeakFunction --stack-name what-a-peak --tail
-```
-
-## Tests
-
-```bash
-cargo test
-```
+Refer to [`serve` module's README](serve/README.md)

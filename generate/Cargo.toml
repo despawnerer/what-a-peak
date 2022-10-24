@@ -1,0 +1,9 @@
+[package]
+name = "what-a-peak-generate"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.66"
+mediawiki = "0.2.8"
+tokio = { version = "1", features = ["full"] }
